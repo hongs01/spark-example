@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spark-example</artifactId>
+        <groupId>com.wash</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>livy</artifactId>
+    <properties>
+        <skipTests>true</skipTests>
+        <skip>true</skip>
+        <skipDeploy>true</skipDeploy>
+        <livy.version>0.4.0.2.6.4.3-1</livy.version>
+    </properties>
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>Public Repositories</name>
+            <url>http://repo.hortonworks.com/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.livy</groupId>
+            <artifactId>livy-api</artifactId>
+            <version>${livy.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.livy</groupId>
+            <artifactId>livy-scala-api_${scala.binary.version}</artifactId>
+            <version>${livy.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.livy</groupId>
+            <artifactId>livy-client-http</artifactId>
+            <version>${livy.version}</version>
+        </dependency>
+    </dependencies>
+</project>
